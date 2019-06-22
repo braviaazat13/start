@@ -1,7 +1,7 @@
 {
 	"name": "app",
 	"main": "gulpfile.js",
-	"author": "Khabirov",
+	"author": "Shmasya",
 	"license": "ISC",
 	"scripts": {
 		"init": "npm i && npm i gulp -g",
@@ -17,13 +17,18 @@
 		"gulp-csso": "^3.0.0",
 		"gulp-file-include": "^2.0.1",
 		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^4.0.1",
-		"gulp-sourcemaps": "^2.6.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
 		"gulp-uglify": "^3.0.0",
 		"gulp-watch": "^5.0.0",
 		"gulp-zip": "^4.0.0",
+		"intl-tel-input": "^15.0.2",
 		"jquery": "^3.3.1",
 		"run-sequence": "^2.2.1",
 		"yargs": "^11.0.0"
+	},
+	"devDependencies": {
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-imagemin": "^5.0.3"
 	}
 }
