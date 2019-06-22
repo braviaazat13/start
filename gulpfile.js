@@ -99,21 +99,21 @@ gulp.task('build-scripts', function () {
  * Optimize Images
  */
 
-gulp.task('images', function () {
-	return gulp.src([srcPath + '/**/*.png', srcPath + '/**/*.svg', srcPath + '/**/*.jpg', srcPath + '/**/*.jpeg', srcPath + '/**/*.gif'])
-		.pipe(imagemin([
-			imagemin.gifsicle({interlaced: true, optimizationLevel: 3}),
-			imagemin.jpegtran({progressive: true}),
-			imagemin.optipng({optimizationLevel: 7}),
-			imagemin.svgo({
-				plugins: [
-					{removeViewBox: true},
-					{cleanupIDs: false}
-				]
-			})
-		]))
-		.pipe(gulp.dest(distPath));
-});
+//gulp.task('images', function () {
+//	return gulp.src([srcPath + '/**/*.png', srcPath + '/**/*.svg', srcPath + '/**/*.jpg', srcPath + '/**/*.jpeg', srcPath + '/**/*.gif'])
+//		.pipe(imagemin([
+//			imagemin.gifsicle({interlaced: true, optimizationLevel: 3}),
+//			imagemin.jpegtran({progressive: true}),
+//			imagemin.optipng({optimizationLevel: 7}),
+//			imagemin.svgo({
+//				plugins: [
+//					{removeViewBox: true},
+//					{cleanupIDs: false}
+//				]
+//			})
+//		]))
+//		.pipe(gulp.dest(distPath));
+//});
 
 /**
  * Copy assets
@@ -254,4 +254,4 @@ function onError(err) {
  */
 
 gulp.task('default', ['clean-dev', 'browser-sync', 'watch']);
-gulp.task('build', ['clean-dist', 'build-styles', 'build-scripts', 'build-scripts-vendor', 'build-templates', 'copy-assets', 'images']);
+gulp.task('build', ['clean-dist', 'build-styles', 'build-scripts', 'build-scripts-vendor', 'build-templates', 'copy-assets']);
