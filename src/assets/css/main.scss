@@ -1,8 +1,6 @@
-@import "header";
-@import "variable";
-
-
-* {
-	margin: 0;
-	padding: 0;
-}
+@import "global/variables";
+@import "vendor/vendor";
+@import "global/global";
+@import "components/components";
+@import "layouts/layouts";
+@import "helpers/helpers";
