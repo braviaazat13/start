@@ -203,16 +203,16 @@ gulp.task('browser-reload', function () {
  */
 
 gulp.task('watch', function () {
-	watch([srcPath + '/**/*.scss', srcPath + '/**/*.css'], function (e) {
+	gulp.watch([srcPath + '/**/*.scss', srcPath + '/**/*.css'], function (e) {
 		runSequence('build-styles');
 	});
-	watch([srcPath + '/assets/js/**/*.js'], function (e) {
+	gulp.watch([srcPath + '/assets/js/**/*.js'], function (e) {
 		runSequence('build-scripts', 'browser-reload');
 	});
-	watch([srcPath + '/assets/vendor/**/*.js', srcPath + '/assets/js/vendor.js'], function (e) {
+	gulp.watch([srcPath + '/assets/vendor/**/*.js', srcPath + '/assets/js/vendor.js'], function (e) {
 		runSequence('build-scripts-vendor', 'browser-reload');
 	});
-	watch(srcPath + '/**/*.html', function (e) {
+	gulp.watch(srcPath + '/**/*.html', function (e) {
 		runSequence('build-templates', 'browser-reload');
 	});
 
